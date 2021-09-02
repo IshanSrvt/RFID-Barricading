@@ -2,7 +2,10 @@
 
 ====================|| Connections ||====================
 
+
+
 LCD Display ~
+
 GND  - GND
 
 VCC   - 5V
@@ -27,6 +30,8 @@ LED   - 5V
 
 LED   - GND
 
+
+
 MFRC522 ~
 
 RST     - 9
@@ -38,6 +43,8 @@ MOSI  - 11
 MISO  - 12
 
 SCK    - 13
+
+
 
 Servo ~
 
