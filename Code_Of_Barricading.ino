@@ -1,3 +1,23 @@
+/*
+  
+================================================================||All Credit of the Code Goes to||=================================================================
+                                                              ** *** *****||Mr.Hacker||***** *** **
+  
+  
+      
+Must_Watch - https://www.youtube.com/channel/UCF2P1qr-vAe6nnce22WsL2w
+      
+      
+Video_Link - https://youtu.be/7uEKTP0RDAA
+
+
+Follow_here - https://www.instagram.com/_mr._coder_/
+
+====================================================================================================================================================================
+
+*/
+
+
 #include <Servo.h>
 
 
@@ -15,8 +35,7 @@ Servo myservo;  // create servo object to control a servo
 const int rs = 2, en = 3, d4 = 7, d5 = 6, d6 = 5, d7 = 4;
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
-//int rled = 8;
-//int gled = 1;
+
 #define SS_PIN 10
 #define RST_PIN 9
 
@@ -28,10 +47,6 @@ void setup()
   mfrc522.PCD_Init();   
   lcd.begin(16, 2);
   lcd.print("Scan RFID Card");
- // pinMode(rled,OUTPUT);
- // pinMode(gled,OUTPUT);
-//  digitalWrite(rled,LOW);
- // digitalWrite(gled,LOW);
   myservo.write(0);
   
 
@@ -69,13 +84,11 @@ lcd.begin(16, 2);
 
 //                                 || -------------------- Main -------------------- ||                                (Servo Control)
 
-  if (content.substring(1) == "39 FF F1 15" ) //cards UID
+  if (content.substring(1) == "Card_UID" ) //    ---- Enter your cards UID Here -----
   {
    lcd.setCursor(0,1);
     lcd.print(" Granted");
     delay(500);
-  //  digitalWrite(rled,LOW);
-    //digitalWrite(gled,HIGH);
     myservo.write(90);
     delay(5000);
    lcd.clear();
@@ -84,11 +97,8 @@ lcd.begin(16, 2);
  
  else   {
   lcd.setCursor(0, 1);
-  //digitalWrite(gled,LOW);
-  //digitalWrite(rled,HIGH);
     lcd.print(" Denied");
     delay(2000);
-     //Door Open
     myservo.write(0);
     delay(3000);
     lcd.clear();
@@ -96,9 +106,4 @@ lcd.begin(16, 2);
       }
 } 
 
-/*
-  
-All Credit OF the Code Goes to
-      - Ishan
-      
-*/
+
