@@ -47,6 +47,9 @@ SCK    - 13
 ______________________________________________________
 
 Servo ~
+RedWire - 5V
+
+BlackWire - GND
 
 YellowWire  - 8
 
